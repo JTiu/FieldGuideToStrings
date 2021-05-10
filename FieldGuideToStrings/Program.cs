@@ -14,39 +14,72 @@ namespace FieldGuideToStrings
             string lastName = "Smith";
             string fullName = firstName + " Jo " + lastName;
             Console.WriteLine($"{fullName}");
-            Console.ReadLine();
+
             string doubleEmployeeName = string.Concat(firstName, firstName, lastName, lastName);
             Console.WriteLine(doubleEmployeeName);
             Console.WriteLine("");
 
-            string employeeSwitchCasing = string.Concat(firstName.ToUpper(), lastName.ToLower()); 
+            string employeeSwitchCasing = string.Concat(firstName.ToUpper(), lastName.ToLower());
             Console.WriteLine(employeeSwitchCasing);
-            Console.ReadLine();
 
 
-            String s1 = "We went to a b\to\to\tkstore, ";
-            String s2 = "a movie, ";
-            String s3 = "and a restaurant.";
 
+            string s1 = "We went to a b\to\to\tkstore, ";
+            string s2 = "a movie, ";
+
+            string s3 = "and a restaurant.";
+            string s4 = "a movie, ";
             var s = String.Concat(s1, s2, s3);
             Console.WriteLine(s);
-            Console.ReadLine();
+
             int length = employeeSwitchCasing.Length;
             Console.WriteLine(length);
-            Console.ReadLine();
 
-             if (fullName.Contains("beth") || lastName.Contains("mi"))
+
+            if (fullName.Contains("beth") || lastName.Contains("mi"))
             {
                 Console.WriteLine("Yeah");
             }
-            
+
             string subString = fullName.Substring(5, 2);
             Console.WriteLine(subString.ToUpper());
-            Console.ReadLine();
+
             string nameUsingInterpolation = $"{firstName.ToUpper()}-{firstName.ToLower()}-{length}-----{employeeSwitchCasing.ToUpper().Trim()}";
             Console.WriteLine(nameUsingInterpolation);
-            Console.ReadLine();
+
+
+            //equality check
+
+            Console.WriteLine("Are equal?\t" + (s1 == s2));
+            Console.WriteLine("Are equal?\t" + (s2 == s4));
+            Console.WriteLine("Are equal?\t" + (s2 == "a movie, "));
+            Console.WriteLine("Are equal?\t" + s2.Equals("a mmmovie, "));
+            Console.WriteLine("Are equal?\t" + s2.Equals("a movie, "));
+
+            string name = "'JT";
+            string anotherName = name;
+            name += " Tiu'";
+            Console.WriteLine("\nname: " + name.ToLower() + "\tanotherName : " + anotherName);
+            
+
+            string indexes = string.Empty;
+            for (int i = 0; i < 25; i++)
+            {
+                indexes += i.ToString();
+            }
+           
+            string first = "James\n";
+            string last = "Jones\n";
+            StringBuilder builder = new StringBuilder();
+            builder.Append("Last name: \n");
+            builder.Append(last);
+            builder.Append("First name: \n");
+            builder.Append(first);
+            string result = builder.ToString();
+            Console.WriteLine(result);
+
+                 Console.ReadLine();
+
         }
-       
     }
 }
