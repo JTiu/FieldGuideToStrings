@@ -10,7 +10,7 @@ namespace FieldGuideToStrings
     {
         static void Main(string[] args)
         {
-            string firstName = "Bethany";
+            string firstName = "BeThAnY";
             string lastName = "Smith";
             string fullName = firstName + " Jo " + lastName;
             Console.WriteLine($"{fullName}");
@@ -24,7 +24,7 @@ namespace FieldGuideToStrings
             Console.ReadLine();
 
 
-            String s1 = "We went to a bookstore, ";
+            String s1 = "We went to a b\to\to\tkstore, ";
             String s2 = "a movie, ";
             String s3 = "and a restaurant.";
 
@@ -39,6 +39,12 @@ namespace FieldGuideToStrings
             {
                 Console.WriteLine("Yeah");
             }
+            
+            string subString = fullName.Substring(5, 2);
+            Console.WriteLine(subString.ToUpper());
+            Console.ReadLine();
+            string nameUsingInterpolation = $"{firstName.ToUpper()}-{firstName.ToLower()}-{length}-----{employeeSwitchCasing.ToUpper().Trim()}";
+            Console.WriteLine(nameUsingInterpolation);
             Console.ReadLine();
         }
        
