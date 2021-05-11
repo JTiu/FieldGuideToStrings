@@ -78,6 +78,21 @@ namespace FieldGuideToStrings
             string result = builder.ToString();
             Console.WriteLine(result);
 
+            Console.WriteLine("Enter your wage");
+            string wage = Console.ReadLine();
+            int wageValue = int.Parse(wage);
+            Console.WriteLine(wageValue + 1000);
+
+            Console.WriteLine("Enter Weekly salary");
+            string salary = Console.ReadLine();
+            int salaryValue;
+                if (int.TryParse(salary, out salaryValue))
+                Console.WriteLine("parsing success:  " + salaryValue);
+
+                else
+                Console.WriteLine("Parsing failed");
+
+
                  Console.ReadLine();
 
         }
