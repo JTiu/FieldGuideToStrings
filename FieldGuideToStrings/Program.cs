@@ -95,6 +95,9 @@ namespace FieldGuideToStrings
 
                  Console.ReadLine();
 
+            Console.WriteLine("Thanks!");
+            Console.ReadLine();
+
         }
     }
 }
